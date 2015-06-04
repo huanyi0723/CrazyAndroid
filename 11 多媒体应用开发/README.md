@@ -46,6 +46,14 @@ SoundPool播放音效 //密集 短促的声音
 
 3 播放视频
 VideoView的用法
+	setVideoPath(String path)
+	setVideoURI(Uri uri)
+	start()
+	stop()
+	pause()
+窗口 全屏的问题
+
+MediaPlayer和SurfaceView实现播放
 
 
 
