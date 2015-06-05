@@ -55,7 +55,43 @@ VideoView的用法
 
 MediaPlayer和SurfaceView实现播放
 
+4 录制音频
+MediaRecorder录制的步骤
+	1 创建MediaRecorder对象
+	2 调用MediaRecorder对象的setAudioSource()设置声音来源 MediaRecorder.AudioSource.MIC指定麦克风
+	3 setOutputFormat //录制的音频文件格式
+	4 setAudioEncoder //声音的编码格式
+	5 setAudioEncodingBitRate //编码位率
+	6 setAudioSamplingRate //采样率
+	7 setOutputFile //文件保存
+	8 prepare //准备录制
+	9 start //开始录制
+	10 stop //停止录制
+	11 release //释放资源
 
+注意 文件路径总结
+	Environment.getExternalStorageDirectory().getCanonicalFile() 
+		对应的路径 /storage/emulated/0 //就是SD卡根路径
+	Environment 常用方法
+		getDataDirectory() //获取 Android 数据目录。
+		getDownloadCacheDirectory() //获取 Android 下载/缓存内容目录。
+		getExternalStorageDirectory() //获取外部存储目录即 SDCard
+		getExternalStoragePublicDirectory(String type) //取一个高端的公用的外部存储器目录来摆放某些类型的文件
+		getExternalStorageState() //获取外部存储设备的当前状态
+		getRootDirectory() //获取 Android 的根目录
+
+5 拍照片
+Camera的用法
+	1 Camera.open(0) //打开摄像头
+	2 camera.getParameters() //获取拍照参赛
+	3 camera.setPreviewDisplay() //设置哪个View显示取景图像
+	4 camera.startPreview() //预览取景
+	5 camera.takePicture() //拍照
+	6 camera.stopPreview() //结束预览取景
+	
+6 录制视频
+MediaRecorder
+存在问题
 
 
 
